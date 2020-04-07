@@ -1,8 +1,8 @@
 // const functions = require('firebase-functions')
 const MongoClient = require('mongodb').MongoClient
-const {MONGO_URI} = require('./vars')
+const MongoSetup = require('./Setup')
 
-const mongoClient = new MongoClient(MONGO_URI, {
+const mongoClient = new MongoClient(MongoSetup.MONGO_URI, {
   useCreateIndex: true,
   useFindAndModify: false,
   bufferCommands: false,
